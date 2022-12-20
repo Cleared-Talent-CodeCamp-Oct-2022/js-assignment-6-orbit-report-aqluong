@@ -15,7 +15,17 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
+		if (this.type === "Space Debris"){
+			return true;
+		}
+		else{
+			return false;
+		}
+		// this method should return true IF you call it on a Satellite Object
+		// that has a type of 'Space Debris'
+		// Example: someSatelliteObj.isSpaceDebris()
+		// would return true if someSatellite.type === 'Sapce Debris'
+		
    }
 
 }

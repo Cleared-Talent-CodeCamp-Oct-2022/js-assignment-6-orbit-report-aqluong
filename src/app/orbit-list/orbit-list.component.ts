@@ -9,6 +9,8 @@ import { Satellite } from '../satellite';
 
 export class OrbitListComponent implements OnInit {
 
+	// this satellites variable is now our reference point for getting the satellite data
+	// we passed into the orbit-list component when we rendered it in app.component.html
   @Input() satellites: Satellite[];
   constructor() { }
 
