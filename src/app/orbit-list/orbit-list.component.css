@@ -1,8 +1,10 @@
 .sortable {
 	cursor: pointer;
-	color: #dd5;
+	/* color: #dd5; */
+	color: rgb(42, 156, 198)
 }
-/* Part 3) Highlight Space debris Warning Class Below*/
+/* Part 3b) Highlight Space debris Warning Class Below*/
+/* Use isSpaceDebris to add the warning CSS class to the <td> containing the satellite's type. */
 .warning {
 	background-color: #da8a8a;
 }
@@ -13,7 +15,8 @@ table {
  overflow: hidden;
  margin: 12px 0;
  min-width: 300px;
- background: #dad8d8;
+ background: hotpink
+ /* #dad8d8; Changing the line color to make it "Pop a little more*/
 }
 
 .header-row {
@@ -36,5 +39,5 @@ tr:nth-child(even){
 }
 
 tr:nth-child(odd){
-	background-color: gray
+	background-color: rgb(212, 191, 215)
 }
