@@ -26,3 +26,15 @@ th, td {
 	margin: 5px 10px;
 	padding: 6px;
 }
+
+
+/* Bonus Zebra Strips where to find answer from google:
+ https://linuxhint.com/css-table-alternate-row-color/#:~:text=A%20style%20selector%20in%20CSS,property%20within%20this%20style%20selector. */
+
+tr:nth-child(even){
+	background-color: lightseagreen;
+}
+
+tr:nth-child(odd){
+	background-color: gray
+}
