@@ -6,7 +6,8 @@
 /* Part 3b) Highlight Space debris Warning Class Below*/
 /* Use isSpaceDebris to add the warning CSS class to the <td> containing the satellite's type. */
 .warning {
-	background-color: #da8a8a;
+	/* background-color: #da8a8a; */
+	background-color: red;
 }
 
 table {
@@ -41,3 +42,4 @@ tr:nth-child(even){
 tr:nth-child(odd){
 	background-color: rgb(212, 191, 215)
 }
+/* Removing the odd will take away the "heading" but the boarder will bleed in  */
