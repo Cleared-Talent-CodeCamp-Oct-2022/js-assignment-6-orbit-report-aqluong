@@ -37,19 +37,38 @@ export class AppComponent {
 
 	}
 
+// Bonus 2) Update the Search Feature: Modify the search feature to find matches using the orbitType and type properties.
+// app.component.ts this is where the search fearture for the Orbit Report searching name so just change out the name and 
+// replace with orbitType and type with if/ else if / else
+
+
 	search(searchTerm: string): void {
 		let matchingSatellites: Satellite[] = [];
 		searchTerm = searchTerm.toLowerCase();
 		for(let i=0; i < this.sourceList.length; i++) {
 			let name = this.sourceList[i].name.toLowerCase();
+			// Bonus 2 Search Term
+			let type = this.sourceList[i].type.toLowerCase();
+			let orbitType = this.sourceList[i].orbitType.toLowerCase();
+
+
 			if (name.indexOf(searchTerm) >= 0) {
 				matchingSatellites.push(this.sourceList[i]);
 			}
+			else if (type.indexOf(searchTerm) >=0){
+				matchingSatellites.push(this.sourceList[i]);
+			}
+			else if (orbitType.indexOf(searchTerm) >=0){
+				matchingSatellites.push(this.sourceList[i]);
+			}
+
+			
+			
 		}
 		// assign this.displayList to be the array of matching satellites
 		// this will cause Angular to re-make the table, but now only containing matches
 		this.displayList = matchingSatellites;
 	}
-
-
 }
+
+

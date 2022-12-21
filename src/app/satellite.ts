@@ -1,3 +1,5 @@
+import { stripGeneratedFileSuffix } from "@angular/compiler/src/aot/util";
+
 export class Satellite {
 
 	name: string;
@@ -13,11 +15,18 @@ export class Satellite {
 		this.orbitType = orbitType;
 		this.operational = operational;
    }
-	
+	// TODO 3a: fix isSpaceDebris check
 	isSpaceDebris(): boolean {
-		return true;
+		if (this.type === "Space Debris"){
+			return true;
+		}
+		else{
+			return false;
+		}
+		// this method should return true IF you call it on a Satellite Object
+		// that has a type of 'Space Debris'
+		// Example: someSatelliteObj.isSpaceDebris()
+		// would return true if someSatellite.type === 'Sapce Debris'
+		
    }
-
 }
-
-// TODO 3a: fix isSpaceDebris check
